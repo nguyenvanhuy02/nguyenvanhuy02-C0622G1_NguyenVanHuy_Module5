@@ -1,4 +1,4 @@
-function sumFibonacci() {
+function sum_fibonacci() {
     let numberOne:number=0;
     let numberTwo:number=1;
     let arr:number[]=[0,1];
@@ -19,4 +19,4 @@ function sumFibonacci() {
     })
     console.log(sum);
 }
-sumFibonacci();
+sum_fibonacci();

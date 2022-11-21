@@ -1,4 +1,4 @@
-function sumFibonacci() {
+function sum_fibonacci() {
     var numberOne = 0;
     var numberTwo = 1;
     var arr = [0, 1];
