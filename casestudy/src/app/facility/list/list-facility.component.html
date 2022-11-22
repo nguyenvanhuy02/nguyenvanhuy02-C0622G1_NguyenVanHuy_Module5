@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head"></head>
+<meta charset="UTF-8">
+<title>Title</title>
+<body>
+<div th:insert="/home :: nav">
+
+</div>
+
+<div class="notify"style="color: red">
+  <div th:if="${mess}">
+    <span th:text="${mess}"></span>
+  </div>
+</div>
+<li class="btn btn-primary">
+  <a style="color: white" class="nav-link dropdown-toggle" href="#" id="navbarEmployee" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Add facility
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <li><a class="dropdown-item" href="/facility/create/villa">Villa</a></li>
+    <li><a class="dropdown-item" href="/facility/create/house">House</a></li>
+    <li><a class="dropdown-item" href="/facility/create/room">Room</a></li>
+  </ul>
+</li>
+<div>
+  <form action="/facility">
+    <input style="width: 20%" type="text" name="name" placeholder="Name" th:value="${name}">
+
+    <select style="width: 20%" th:name="facilityType">
+      <option th:if="${facilityType != ''}" th:value="${facilityType}" th:text="${facilityType}"></option>
+      <option value="">-All-</option>
+      <option th:each="item : ${facilityTypeList}" th:value="${item.name}" th:text="${item.name}"></option>
+    </select>
+
+    <input type="submit" value="Search" style="width: 10%">
+  </form>
+</div>
+
+<table id = "blog" class="table table-sm , bg-body">
+  <thead>
+  <tr class="bg-warning">
+    <th>STT</th>
+    <th>Name</th>
+    <th>Area</th>
+    <th>Cost</th>
+    <th>Max people</th>
+    <th>Rent type</th>
+    <th>Edit</th>
+    <th>View</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="facility , rowStat : ${facilityPage}">
+    <td th:text="${facilityPage.number*5+rowStat.count}"></td>
+    <td th:text="${facility.getName()}"></td>
+    <td th:text="${facility.getArea()}"></td>
+    <td th:text="${facility.getCost()}"></td>
+    <td th:text="${facility.getMaxPeople()}"></td>
+    <td th:text="${facility.getRentType().getName()}"></td>
+    <td><a th:href="@{facility/{id}/edit(id=${facility.getId()})}" class="btn btn-primary">Edit</a></td>
+    <td><a th:href="@{facility/{id}/view(id=${facility.getId()})}" class="btn btn-primary">View</a></td>
+    <td><a th:href="@{facility/{id}/delete(id=${facility.getId()})}" class="btn btn-primary">Delete</a></td>
+  </tr>
+  </tbody>
+</table>
+
+<div>
+    <span>
+        <a th:if="${facilityPage.hasPrevious()}"
+           th:href="@{/facility(page=${facilityPage.number}-1, name = ${name}, facilityType = ${facilityType})}">
+            Previous
+        </a>
+    </span>
+
+  <span th:text="${facilityPage.number+1}"></span>/
+  <span th:text="${facilityPage.totalPages}"></span>
+
+  <span>
+        <a th:if="${facilityPage.hasNext()}"
+           th:href="@{/facility(page=${facilityPage.number+1}, name = ${name}, facilityType = ${facilityType})}">
+            Next
+        </a>
+    </span>
+</div>
+
+</body>
+</html>
