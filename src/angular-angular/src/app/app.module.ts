@@ -7,6 +7,9 @@ import {FormsModule} from "@angular/forms";
 import { LikeComponent } from './ss4_angular_component_template/practice/like/like.component';
 import { NavbarComponent } from './ss4_angular_component_template/practice/navbar/navbar.component';
 import { FooterComponent } from './ss4_angular_component_template/practice/footer/footer.component';
+import { AppNameCardComponent } from './ss5_components_interaction/practice/app-name-card/app-name-card.component';
+import { RatingBarComponent } from './ss5_components_interaction/exercise/rating-bar/rating-bar.component';
+import { CountdownTimerComponent } from './ss5_components_interaction/exercise/countdown-timer/countdown-timer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { FooterComponent } from './ss4_angular_component_template/practice/foote
     CreateApplicationHackernewsComponent,
     LikeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    AppNameCardComponent,
+    RatingBarComponent,
+    CountdownTimerComponent
   ],
     imports: [
         BrowserModule,
