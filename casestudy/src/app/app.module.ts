@@ -12,6 +12,8 @@ import { CreateHouseComponent } from './facility/create-house/create-house.compo
 import { CreateRoomComponent } from './facility/create-room/create-room.component';
 import { CreateVillaComponent } from './facility/create-villa/create-villa.component';
 import { ListCustomerComponent } from './customer/list-customer/list-customer.component';
+import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
+import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { ListCustomerComponent } from './customer/list-customer/list-customer.co
     CreateHouseComponent,
     CreateRoomComponent,
     CreateVillaComponent,
-    ListCustomerComponent
+    ListCustomerComponent,
+    EditCustomerComponent,
+    CreateCustomerComponent
   ],
   imports: [
     BrowserModule
