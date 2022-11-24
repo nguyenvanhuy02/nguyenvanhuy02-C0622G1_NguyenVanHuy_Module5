@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Form Login</h2>
+  <form [formGroup]="rfLogin" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" formControlName="email" class="form-control"
+             [ngClass]="rfLogin.controls['email'].invalid ? 'is-invalid' : 'is-valid'">
+      <div class="invalid-feedback">
+        <div *ngIf="rfLogin.controls['email'].errors?.required && (rfLogin.controls['email'].touched)">
+          No empty
+        </div>
+        <div *ngIf="rfLogin.controls['email'].errors?.email">
+          Email invalidate
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" formControlName="password" class="form-control"
+             [ngClass]="rfLogin.controls['password'].invalid ? 'is-invalid' : 'is-valid'">
+      <div class="invalid-feedback">
+        <div *ngIf="rfLogin.controls['password'].errors?.required && (rfLogin.controls['password'].touched)">
+          No empty
+        </div>
+        <div *ngIf="rfLogin.controls['password'].errors?.minlength">
+          Password > 6
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!rfLogin.valid">Submit</button>
+  </form>
+</div>
+
