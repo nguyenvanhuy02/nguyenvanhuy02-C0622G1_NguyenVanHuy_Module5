@@ -1,4 +1,3 @@
-
 <!--Bài 4-->
 
 
@@ -13,10 +12,23 @@
 <!--Bài 5: Bài tập-->
 <!--<app-rating-bar></app-rating-bar>-->
 <!--<app-countdown-timer></app-countdown-timer>-->
+<!--<a routerLink="/product/create">Tạo mới sản phẩm</a>-->
+<!--<router-outlet></router-outlet>-->
 
 <!--Bài 6 : demo-->
 <!--<app-demos6></app-demos6>-->
 
 <!--Bài 6 : bài tập -->
 <!--<app-form-register></app-form-register>-->
-<app-form-login></app-form-login>
+<!--<app-form-login></app-form-login>-->
+
+
+<!--bài 7:-->
+<div class="container">
+  <div class="container mb-3">
+    <h1 class="mb-3">Ứng dụng quản lý sản phẩm</h1>
+    <a class="btn btn-primary " routerLink="/product" role="button">Trang Chủ</a>
+    <a class="btn btn-success mx-3" routerLink="/product/create" role="button">Thêm Mới</a>
+  </div>
+  <router-outlet></router-outlet>
+</div>
