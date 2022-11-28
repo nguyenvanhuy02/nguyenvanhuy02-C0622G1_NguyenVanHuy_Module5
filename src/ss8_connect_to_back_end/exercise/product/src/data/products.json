@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "IPhone 12",
+      "price": 2400000,
+      "description": "New"
+    },
+    {
+      "id": 2,
+      "name": "IPhone 11",
+      "price": 1560000,
+      "description": "Like new"
+    },
+    {
+      "id": 3,
+      "name": "IPhone X",
+      "price": 968000,
+      "description": "97%"
+    },
+    {
+      "id": 4,
+      "name": "IPhone 8",
+      "price": 7540000,
+      "description": "98%"
+    },
+    {
+      "id": 5,
+      "name": "IPhone 11 Pro",
+      "price": 1895000,
+      "description": "98%"
+    },
+    {
+      "id": 6,
+      "name": "Nguyễn Văn Huy",
+      "price": 1122,
+      "description": "32"
+    },
+    {
+      "id": 7,
+      "name": "Lê  Viết Huy",
+      "price": 2222,
+      "description": "22"
+    },
+    {
+      "id": 8,
+      "name": "Đỗ Đức Uy",
+      "price": 322,
+      "description": "32"
+    },
+    {
+      "id": "10",
+      "name": "123123",
+      "price": 123123,
+      "description": "123123"
+    },
+    {
+      "id": "21312321",
+      "name": "123",
+      "price": 123,
+      "description": "123"
+    },
+    {
+      "id": "123",
+      "name": "123",
+      "price": 123,
+      "description": "123"
+    }
+  ]
+}
