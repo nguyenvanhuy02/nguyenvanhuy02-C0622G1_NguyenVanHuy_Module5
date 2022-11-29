@@ -9,7 +9,7 @@
 
 </div>
 
-<div class="notify"style="color: red">
+<div class="notify" style="color: red">
   <div th:if="${mess}">
     <span th:text="${mess}"></span>
   </div>
@@ -25,14 +25,14 @@
     <input style="width: 20%" type="text" name="email" placeholder="Email">
 
     <select style="width: 20%" th:name="customerTypeId">
-      <option value=""  selected>Choose Something</option>
+      <option value="" selected>Choose Something</option>
       <option th:each="item : ${customerTypeList}" th:value="${item.id}" th:text="${item.name}"></option>
     </select>
 
     <input type="submit" value="Search" style="width: 10%">
   </form>
 </div>
-<table id = "blog" class="table table-sm , bg-body">
+<table id="blog" class="table table-sm , bg-body">
   <thead>
   <tr class="bg-warning">
     <th>STT</th>
@@ -50,19 +50,19 @@
   </tr>
   </thead>
   <tbody>
-  <tr th:each="customer , rowStat : ${customerPage}">
-    <td th:text="${customerPage.number*5+rowStat.count}"></td>
-    <td th:text="${customer.getName()}"></td>
-    <td th:text="${customer.getDateOfBirth()}"></td>
-    <td th:text="${customer.gender.getName()}"></td>
-    <td th:text="${customer.getIdCard()}"></td>
-    <td th:text="${customer.getPhoneNumber()}"></td>
-    <td th:text="${customer.getEmail()}"></td>
-    <td th:text="${customer.getAddress()}"></td>
-    <td th:text="${customer.getCustomerType().getName()}"></td>
-    <td><a th:href="@{customer/{id}/edit(id=${customer.getId()})}" class="btn btn-primary">Edit</a></td>
-    <td><a th:href="@{customer/{id}/view(id=${customer.getId()})}" class="btn btn-primary">View</a></td>
-    <td><a th:href="@{customer/{id}/delete(id=${customer.getId()})}" class="btn btn-primary" >Delete</a></td>
+  <tr *ngFor="let item of customerList;let i = index">
+    <td>{{i + 1}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.dateOfBirth}}</td>
+    <td>{{item.gender}}</td>
+    <td>{{item.idCard}}</td>
+    <td>{{item.phone}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.address}}</td>
+    <td>{{item.customerTypeId}}</td>
+    <td><a class="btn btn-primary">Edit</a></td>
+    <td><a class="btn btn-primary">View</a></td>
+    <td><a class="btn btn-primary">Delete</a></td>
   </tr>
   </tbody>
 </table>

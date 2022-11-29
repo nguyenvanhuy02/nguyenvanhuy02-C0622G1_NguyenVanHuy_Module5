@@ -8,19 +8,20 @@
 
 </div>
 
-<div class="notify"style="color: red">
+<div class="notify" style="color: red">
   <div th:if="${mess}">
     <span th:text="${mess}"></span>
   </div>
 </div>
 <li class="btn btn-primary">
-  <a style="color: white" class="nav-link dropdown-toggle" href="#" id="navbarEmployee" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <a style="color: white" class="nav-link dropdown-toggle" href="#" id="navbarEmployee" role="button"
+     data-bs-toggle="dropdown" aria-expanded="false">
     Add facility
   </a>
   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <li><a class="dropdown-item" href="/facility/create/villa">Villa</a></li>
-    <li><a class="dropdown-item" href="/facility/create/house">House</a></li>
-    <li><a class="dropdown-item" href="/facility/create/room">Room</a></li>
+    <li><a class="dropdown-item" href="">Villa</a></li>
+    <li><a class="dropdown-item" href="">House</a></li>
+    <li><a class="dropdown-item" href="">Room</a></li>
   </ul>
 </li>
 <div>
@@ -37,7 +38,7 @@
   </form>
 </div>
 
-<table id = "blog" class="table table-sm , bg-body">
+<table id="blog" class="table table-sm , bg-body">
   <thead>
   <tr class="bg-warning">
     <th>STT</th>
@@ -52,38 +53,38 @@
   </tr>
   </thead>
   <tbody>
-  <tr th:each="facility , rowStat : ${facilityPage}">
-    <td th:text="${facilityPage.number*5+rowStat.count}"></td>
-    <td th:text="${facility.getName()}"></td>
-    <td th:text="${facility.getArea()}"></td>
-    <td th:text="${facility.getCost()}"></td>
-    <td th:text="${facility.getMaxPeople()}"></td>
-    <td th:text="${facility.getRentType().getName()}"></td>
-    <td><a th:href="@{facility/{id}/edit(id=${facility.getId()})}" class="btn btn-primary">Edit</a></td>
-    <td><a th:href="@{facility/{id}/view(id=${facility.getId()})}" class="btn btn-primary">View</a></td>
-    <td><a th:href="@{facility/{id}/delete(id=${facility.getId()})}" class="btn btn-primary">Delete</a></td>
+  <tr *ngFor="let item of facilityList;let i = index">
+    <td>{{i + 1}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.area}}</td>
+    <td>{{item.cost}}</td>
+    <td>{{item.maxPeople}}</td>
+    <td>{{item.rentTypeId}}</td>
+    <td><a class="btn btn-primary">Edit</a></td>
+    <td><a class="btn btn-primary">View</a></td>
+    <td><a class="btn btn-primary">Delete</a></td>
   </tr>
   </tbody>
 </table>
 
-<div>
-    <span>
-        <a th:if="${facilityPage.hasPrevious()}"
-           th:href="@{/facility(page=${facilityPage.number}-1, name = ${name}, facilityType = ${facilityType})}">
-            Previous
-        </a>
-    </span>
+<!--<div>-->
+<!--    <span>-->
+<!--        <a th:if="${facilityPage.hasPrevious()}"-->
+<!--           th:href="@{/facility(page=${facilityPage.number}-1, name = ${name}, facilityType = ${facilityType})}">-->
+<!--            Previous-->
+<!--        </a>-->
+<!--    </span>-->
 
-  <span th:text="${facilityPage.number+1}"></span>/
-  <span th:text="${facilityPage.totalPages}"></span>
+<!--  <span th:text="${facilityPage.number+1}"></span>/-->
+<!--  <span th:text="${facilityPage.totalPages}"></span>-->
 
-  <span>
-        <a th:if="${facilityPage.hasNext()}"
-           th:href="@{/facility(page=${facilityPage.number+1}, name = ${name}, facilityType = ${facilityType})}">
-            Next
-        </a>
-    </span>
-</div>
+<!--  <span>-->
+<!--        <a th:if="${facilityPage.hasNext()}"-->
+<!--           th:href="@{/facility(page=${facilityPage.number+1}, name = ${name}, facilityType = ${facilityType})}">-->
+<!--            Next-->
+<!--        </a>-->
+<!--    </span>-->
+<!--</div>-->
 
 </body>
 </html>

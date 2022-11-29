@@ -16,6 +16,8 @@ import {EditCustomerComponent} from './customer/edit-customer/edit-customer.comp
 import {CreateCustomerComponent} from './customer/create-customer/create-customer.component';
 import { CreateContractComponent } from './contract/create-contract/create-contract.component';
 import { ListContractComponent } from './contract/list-contract/list-contract.component';
+import {HttpClientModule} from '@angular/common/http';
+import {RoutingModule} from './routing.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ListContractComponent } from './contract/list-contract/list-contract.co
     ListContractComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    RoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,15 @@
+{
+  "customers": [
+    {
+      "name":"Nguyễn Thị Hào",
+      "dateOfBirth":"1970-11-07",
+      "gender":0,
+      "idCard":"643431213",
+      "phone":"0945423362",
+      "email":"thihao07@gmail.com",
+      "address":"23 Nguyễn Hoàng, Đà Nẵng",
+      "customerTypeId":5,
+      "status":1
+    }
+  ]
+}

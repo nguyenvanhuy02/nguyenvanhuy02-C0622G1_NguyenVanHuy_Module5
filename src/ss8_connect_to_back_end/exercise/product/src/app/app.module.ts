@@ -9,6 +9,8 @@ import { ProductCreateComponent } from './product-create/product-create.componen
 import {ReactiveFormsModule} from "@angular/forms";
 import { ProductDeleteComponent } from './product-delete/product-delete.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { CategoryListComponent } from './category/category-list/category-list.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     ProductListComponent,
     ProductCreateComponent,
     ProductDeleteComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

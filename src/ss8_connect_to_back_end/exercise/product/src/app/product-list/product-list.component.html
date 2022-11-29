@@ -12,10 +12,11 @@
               <th>Tên Sản Phẩm</th>
               <th>Giá</th>
               <th>Mô tả</th>
+              <th>Loại</th>
               <th colspan="2">Chức Năng</th>
             </tr>
             <!--Từ ts -> HTML-->
-            <tr *ngFor="let item of productList; let i = index">
+            <tr *ngFor="let item of productList | paginate: {itemsPerPage:count,currentPage:p}; let i = index;">
               <td>{{i + 1}}</td>
               <td>
                 <span>{{item.id}}</span>
@@ -31,6 +32,9 @@
               <td>
                 <span>{{item.description}}</span>
               </td>
+              <td>
+                <span>{{item.category.name}}</span>
+              </td>
 
               <td>
                 <button class="btn btn-danger bg-danger" [routerLink]="['/product/delete',item.id]">Xóa</button>
@@ -45,5 +49,9 @@
       </div>
     </div>
   </div>
+</div>
+<!--Including the pagination control.-->
+<div class="text-right">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
 

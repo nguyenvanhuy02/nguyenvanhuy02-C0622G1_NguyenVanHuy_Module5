@@ -1,0 +1,36 @@
+{
+  "facility": [
+    {
+      "id": 1,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTawPso_Q1ns502ouuDkk3D_aAb8hyDjoILLg&usqp=CAU",
+      "name": "Villa Beach Front",
+      "area": 25000,
+      "cost": 1000000,
+      "maxPeople": 10,
+      "standardRoom": "Vip",
+      "descriptionOtherConvenience": "Có hồ bơi",
+      "poolArea": 500,
+      "numberOfFloors": 4,
+      "facilityFree": "undefined",
+      "rentTypeId": 3,
+      "facilityTypeId": 1,
+      "status": 1
+    },
+    {
+      "id": 2,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTawPso_Q1ns502ouuDkk3D_aAb8hyDjoILLg&usqp=CAU",
+      "name": "Villa Beach Front",
+      "area": 27000,
+      "cost": 1000000,
+      "maxPeople": 10,
+      "standardRoom": "Vip Mao",
+      "descriptionOtherConvenience": "Có hồ bơi",
+      "poolArea": 500,
+      "numberOfFloors": 4,
+      "facilityFree": "undefined",
+      "rentTypeId": 3,
+      "facilityTypeId": 1,
+      "status": 1
+    }
+  ]
+}
