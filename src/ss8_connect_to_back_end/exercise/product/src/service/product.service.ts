@@ -27,8 +27,8 @@ export class ProductService {
     return this._httpClient.get<Product>(environment.api_url + '/' + id);
   }
 
-  remove(productId: number): Observable<void>{
-    return this._httpClient.delete<void>(environment.api_url + '/' + productId)
+  delete(productId: number): Observable<void>{
+    return this._httpClient.delete<void>(environment.api_url + '/' + productId);
   }
 
 

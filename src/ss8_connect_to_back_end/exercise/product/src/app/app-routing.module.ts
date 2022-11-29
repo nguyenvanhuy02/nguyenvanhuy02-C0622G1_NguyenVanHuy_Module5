@@ -8,7 +8,7 @@ import {ProductDeleteComponent} from "./product-delete/product-delete.component"
 const routes: Routes = [
   {path: 'product',component: ProductListComponent},
   {path: 'product/create',component: ProductCreateComponent},
-  {path: 'product/delete',component: ProductDeleteComponent},
+  {path: 'product/delete/:id',component: ProductDeleteComponent},
 ];
 
 @NgModule({

@@ -3,11 +3,11 @@
     {
       "id": 3,
       "content": "case task 2",
-      "complete": true
+      "complete": false
     },
     {
       "content": "task 7",
-      "complete": false,
+      "complete": true,
       "id": 8
     },
     {
