@@ -8,13 +8,13 @@
     },
     {
       "id": 2,
-      "name": "IPhone 11",
-      "price": 1560000,
-      "description": "Like new"
+      "name": "IPhone 12 viethuy",
+      "price": 123123,
+      "description": "100%"
     },
     {
       "id": 3,
-      "name": "IPhone X",
+      "name": "IPhone 123123",
       "price": 968000,
       "description": "97%"
     },
@@ -47,12 +47,6 @@
       "name": "Đỗ Đức Uy",
       "price": 322,
       "description": "32"
-    },
-    {
-      "id": "123",
-      "name": "123",
-      "price": 123,
-      "description": "123"
     }
   ]
 }

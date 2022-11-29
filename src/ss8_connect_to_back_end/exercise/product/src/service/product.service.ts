@@ -23,12 +23,16 @@ export class ProductService {
     return this._httpClient.post<Product>(environment.api_url,product);
   }
 
-  findId(id: number): Observable<Product> {
+  findProductEdit(id: number): Observable<Product> {
     return this._httpClient.get<Product>(environment.api_url + '/' + id);
   }
 
   delete(productId: number): Observable<void>{
     return this._httpClient.delete<void>(environment.api_url + '/' + productId);
+  }
+
+  editProduct(productEdit: Product): Observable<Product> {
+    return this._httpClient.put<Product>(environment.api_url + '/' + productEdit.id, productEdit);
   }
 
 
