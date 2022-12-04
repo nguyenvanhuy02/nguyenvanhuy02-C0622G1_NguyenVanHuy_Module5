@@ -1,0 +1,161 @@
+{
+  "veXe": [
+    {
+      "id": 1,
+      "diemDen": "Đà Nẵng",
+      "diemDi": "Huế",
+      "giaVe": 10000,
+      "ngayKhoiHanh": "06/09/2021",
+      "gioKhoiHanh": "20:00",
+      "soLuong": 10,
+      "nhaXe": {
+        "maNhaXe": 1,
+        "tenNhaXe": "Phương Trang"
+      }
+    },
+    {
+      "id": 2,
+      "diemDen": "Đà Nẵng",
+      "diemDi": "Hải Phòng",
+      "giaVe": 500000,
+      "ngayKhoiHanh": "10/09/2021",
+      "gioKhoiHanh": "06:00",
+      "soLuong": 5,
+      "nhaXe": {
+        "maNhaXe": 2,
+        "tenNhaXe": "Trung Nguyên"
+      }
+    },
+    {
+      "id": 3,
+      "diemDen": "Đà nẵng",
+      "diemDi": "Hà Nội",
+      "giaVe": 450000,
+      "ngayKhoiHanh": "09/10/2021",
+      "gioKhoiHanh": "07:40",
+      "soLuong": 15,
+      "nhaXe": {
+        "maNhaXe": 3,
+        "tenNhaXe": "Trung Tín"
+      }
+    },
+    {
+      "id": 4,
+      "diemDen": "Đà Nẵng",
+      "diemDi": "Hà Nội",
+      "giaVe": 5000000,
+      "ngayKhoiHanh": "11/09/2021",
+      "gioKhoiHanh": "11:00",
+      "soLuong": 5,
+      "nhaXe": {
+        "maNhaXe": 2,
+        "tenNhaXe": "Trung Nguyên"
+      }
+    },
+    {
+      "id": 5,
+      "diemDi": "Đà Nẵng",
+      "diemDen": "",
+      "ngayKhoiHanh": "11/09/2022",
+      "gioKhoiHanh": "60:00",
+      "giaVe": 10,
+      "soLuong": 5,
+      "nhaXe": {
+        "maNhaXe": 2,
+        "tenNhaXe": "Trung Nguyên"
+      }
+    },
+    {
+      "id": 6,
+      "diemDi": "Đà Nẵng",
+      "diemDen": "Huế Mộng",
+      "ngayKhoiHanh": "11/11/1111",
+      "gioKhoiHanh": "11:11",
+      "giaVe": 11,
+      "soLuong": 11,
+      "nhaXe": {
+        "maNhaXe": 1,
+        "tenNhaXe": "Phương Trang"
+      }
+    },
+    {
+      "id": 7,
+      "diemDi": "Hà Nội",
+      "diemDen": "Huế",
+      "ngayKhoiHanh": "2022-12-29",
+      "gioKhoiHanh": "60:00",
+      "giaVe": 11,
+      "soLuong": 11,
+      "nhaXe": {
+        "maNhaXe": 2,
+        "tenNhaXe": "Trung Nguyên"
+      }
+    },
+    {
+      "id": 8,
+      "diemDi": "Huế",
+      "diemDen": "Hà Nội",
+      "ngayKhoiHanh": "2022-12-07",
+      "gioKhoiHanh": "60:00",
+      "giaVe": 123,
+      "soLuong": 123,
+      "nhaXe": {
+        "maNhaXe": 2,
+        "tenNhaXe": "Trung Nguyên"
+      }
+    },
+    {
+      "id": 9,
+      "diemDi": "Quảng Trị",
+      "diemDen": "Quảng Trị",
+      "ngayKhoiHanh": "2022-12-28",
+      "gioKhoiHanh": "07:00",
+      "giaVe": 32,
+      "soLuong": 11,
+      "nhaXe": {
+        "maNhaXe": 2,
+        "tenNhaXe": "Trung Nguyên"
+      }
+    },
+    {
+      "id": 10,
+      "diemDi": "Hôm Nay",
+      "diemDen": "Ngày Mai",
+      "ngayKhoiHanh": "2022-12-07",
+      "gioKhoiHanh": "08:00",
+      "giaVe": 21365,
+      "soLuong": 23,
+      "nhaXe": {
+        "maNhaXe": 2,
+        "tenNhaXe": "Trung Nguyên"
+      }
+    },
+    {
+      "id": 11,
+      "diemDi": "Huế",
+      "diemDen": "SaPa",
+      "ngayKhoiHanh": "2022-12-14",
+      "gioKhoiHanh": "06:00",
+      "giaVe": 10000,
+      "soLuong": 11,
+      "nhaXe": {
+        "maNhaXe": 2,
+        "tenNhaXe": "Trung Nguyên"
+      }
+    }
+  ],
+  "nhaXe": [
+    {
+      "maNhaXe": 1,
+      "tenNhaXe": "Phương Trang"
+    },
+    {
+      "maNhaXe": 2,
+      "tenNhaXe": "Trung Nguyên"
+    },
+    {
+      "maNhaXe": 3,
+      "tenNhaXe": "Trung Tín"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+
+<div class="container">
+
+  <form [formGroup]="rfSearch" (ngSubmit)="onSearch()">
+    <label>
+      <input type="text" placeholder="Tìm kiếm điểm đến" formControlName="searchDD">
+    </label>
+    <label>
+      <input type="text" placeholder="Tìm kiếm điểm đi" formControlName="searchDDi">
+    </label>
+    <input type="submit" value="Tìm kiếm">
+  </form>
+  <div class="row">
+    <div class="col-12">
+      <div class="card border-primary">
+        <h3 class="card-header bg-primary">Danh sách vé xe</h3>
+        <div class="card-body">
+          <h4 class="card-title">Danh sách</h4>
+          <table class="table w-100">
+            <tr>
+              <th>STT</th>
+              <th>Điểm di</th>
+              <th>Điểm đến</th>
+              <th>Giá vé</th>
+              <th>Ngày khởi hành</th>
+              <th>Giờ khởi hành</th>
+              <th>Nhà xe</th>
+              <th>Số lượng</th>
+              <th colspan="2">Chức Năng</th>
+            </tr>
+            <!--Từ ts -> HTML-->
+            <tr *ngFor="let item of danhSachVeXe | paginate: {itemsPerPage:count,currentPage:p}; let i = index;">
+              <td>{{i + 1}}</td>
+
+              <td>
+                <span>{{item.diemDi}}</span>
+              </td>
+
+              <td>
+                <span>{{item.diemDen}}</span>
+              </td>
+
+              <td>
+                <span>{{item.giaVe}}</span>
+              </td>
+
+              <td>
+                <span>{{item.ngayKhoiHanh}}</span>
+              </td>
+
+              <td>
+                <span>{{item.gioKhoiHanh}}</span>
+              </td>
+
+              <td>
+                <span>{{item.nhaXe.tenNhaXe}}</span>
+              </td>
+
+              <td>
+                <span>{{item.soLuong}}</span>
+              </td>
+
+              <td>
+                <button class="btn btn-primary bg-primary" [routerLink]="[]">Đặt vé</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Including the pagination control.-->
+<div class="text-right">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+

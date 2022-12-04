@@ -1,4 +1,16 @@
 <div class="container">
+  <form [formGroup]="rfProduct" (ngSubmit)="onSearch()">
+    <label>
+      <input type="text" placeholder="search name" formControlName="searchName">
+    </label>
+    <label>
+      <select formControlName="category">
+        <option [value]="''" >Select</option>
+        <option *ngFor="let item of categoryList" [value]="item.id" >{{item.name}}</option>
+      </select>
+    </label>
+    <input type="submit" value="Search">
+  </form>
   <div class="row">
     <div class="col-12">
       <div class="card border-primary">

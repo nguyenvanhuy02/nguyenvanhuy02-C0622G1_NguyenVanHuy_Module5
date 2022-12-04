@@ -1,0 +1,65 @@
+
+<div class="container">
+  <p style="margin-left:450px;color:#0a53be;font-weight: bold">{{mess}}</p>
+
+  <form [formGroup]="rfSearch" (ngSubmit)="onSearch()">
+    <label>
+      <input type="text" placeholder="search name" formControlName="searchName">
+    </label>
+    <label>
+      <select formControlName="facilityType">
+        <option [value]="''" >Select</option>
+        <option *ngFor="let item of facilityTypeList" [value]="item.id" >{{item.name}}</option>
+      </select>
+    </label>
+    <input type="submit" value="Search">
+  </form>
+  <div class="row">
+    <div class="col-12">
+      <div class="card border-primary">
+        <h3 class="card-header bg-primary">Facility</h3>
+        <div class="card-body">
+          <h4 class="card-title">List Facility</h4>
+          <table class="table w-100">
+            <tr>
+              <th>STT</th>
+              <th>Name</th>
+              <th>Area</th>
+              <th>Facility Type</th>
+              <th colspan="2">Chức Năng</th>
+            </tr>
+            <!--Từ ts -> HTML-->
+            <tr *ngFor="let item of facilityList | paginate: {itemsPerPage:count,currentPage:p}; let i = index;">
+              <td>{{i + 1}}</td>
+
+              <td>
+                <span>{{item.name}}</span>
+              </td>
+
+              <td>
+                <span>{{item.area}}</span>
+              </td>
+
+              <td>
+                <span>{{item.facilityType.name}}</span>
+              </td>
+
+              <td>
+                <button class="btn btn-danger bg-danger" [routerLink]="['/facility/delete',item.id]">Xóa</button>
+              </td>
+
+              <td>
+                <button class="btn btn-primary bg-primary" [routerLink]="['/facility/edit',item.id]">Chỉnh Sửa</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Including the pagination control.-->
+<div class="text-right">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+

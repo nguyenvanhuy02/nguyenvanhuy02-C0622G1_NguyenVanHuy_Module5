@@ -18,6 +18,19 @@ export class ProductService {
     return this._httpClient.get<Product[]>(environment.api_url)
   }
 
+
+  searchProduct(rfSearch: any): Observable<Product[]> {
+    if (!(rfSearch.searchName.length) && !(rfSearch.category)) {
+      return this._httpClient.get<Product[]>(
+        environment.api_url
+      );
+    }
+    return this._httpClient.get<Product[]>(
+      environment.api_url +
+      '?name_like=' + rfSearch.searchName +
+      '&category.id_like=' + rfSearch.category);
+  }
+
   save(product: Product): Observable<Product> {
     return this._httpClient.post<Product>(environment.api_url, product);
   }

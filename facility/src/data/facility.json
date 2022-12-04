@@ -1,0 +1,126 @@
+{
+  "facility": [
+    {
+      "id": 1,
+      "name": "villa Nguyễn Văn",
+      "area": 300,
+      "facilityType": {
+        "id": 1,
+        "name": "villa"
+      }
+    },
+    {
+      "id": 2,
+      "name": "house Nguyễn VĂn Huy",
+      "area": 123456789,
+      "facilityType": {
+        "id": 1,
+        "name": "villa"
+      }
+    },
+    {
+      "id": 3,
+      "name": "room Bùi Minh Tiến",
+      "area": 300,
+      "facilityType": {
+        "id": 3,
+        "name": "room"
+      }
+    },
+    {
+      "id": 4,
+      "name": "roomLike",
+      "area": 300,
+      "facilityType": {
+        "id": 2,
+        "name": "house"
+      }
+    },
+    {
+      "id": 5,
+      "name": "villa mao",
+      "area": 300,
+      "facilityType": {
+        "id": 1,
+        "name": "villa"
+      }
+    },
+    {
+      "id": 7,
+      "name": "room",
+      "area": 300,
+      "facilityType": {
+        "id": 1,
+        "name": "villa"
+      }
+    },
+    {
+      "id": 8,
+      "name": "room",
+      "area": 300,
+      "facilityType": {
+        "id": 3,
+        "name": "room"
+      }
+    },
+    {
+      "id": 10,
+      "name": "room",
+      "area": 300,
+      "facilityType": {
+        "id": 3,
+        "name": "room"
+      }
+    },
+    {
+      "id": 11,
+      "name": "room",
+      "area": 300,
+      "facilityType": {
+        "id": 1,
+        "name": "villa"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Nguyễn Văn Huy",
+      "area": 150,
+      "facilityType": {
+        "id": 2,
+        "name": "house"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Mao Mao ",
+      "area": 12321,
+      "facilityType": {
+        "id": 2,
+        "name": "house"
+      }
+    },
+    {
+      "id": 15,
+      "name": "huyyyyy",
+      "area": 23232,
+      "facilityType": {
+        "id": 2,
+        "name": "house"
+      }
+    }
+  ],
+  "facilityType": [
+    {
+      "id": 1,
+      "name": "villa"
+    },
+    {
+      "id": 2,
+      "name": "house"
+    },
+    {
+      "id": 3,
+      "name": "room"
+    }
+  ]
+}

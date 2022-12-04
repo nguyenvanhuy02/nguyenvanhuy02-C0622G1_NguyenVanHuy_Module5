@@ -1,0 +1,89 @@
+<div class="card border-success mt-4">
+  <h3 class="card-header bg-success">Thêm Mới vé xe</h3>
+  <div class="card-body">
+    <h4 class="card-title">Thêm mới vé xe</h4>
+    <form [formGroup]="rfVeXe" (ngSubmit)="onSubmit()">
+      <div>
+
+      </div>
+      <div class="form-group mt-4">
+        <label>Điểm đi:</label>
+        <input type="text" class="form-group" formControlName="diemDi"
+               [ngClass]="rfVeXe.controls['diemDi'].invalid ? 'is-invalid' : 'is-valid'">
+        <div class="invalid-feedback">
+          <div *ngIf="rfVeXe.controls['diemDi'].errors?.required && (rfVeXe.controls['diemDi'].touched)">
+            Không được để trống !
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mt-4">
+        <label>Điểm đến:</label>
+        <input type="text" formControlName="diemDen"
+               [ngClass]="rfVeXe.controls['diemDen'].invalid ? 'is-invalid' : 'is-valid'">
+        <div class="invalid-feedback">
+          <div *ngIf="rfVeXe.controls['diemDen'].errors?.required && (rfVeXe.controls['diemDen'].touched)">
+            Không được để trống !
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mt-4">
+        <label>Ngày khởi hành:</label>
+        <input type="date" formControlName="ngayKhoiHanh"
+               [ngClass]="rfVeXe.controls['ngayKhoiHanh'].invalid ? 'is-invalid' : 'is-valid'">
+        <div class="invalid-feedback">
+          <div *ngIf="rfVeXe.controls['ngayKhoiHanh'].errors?.required && (rfVeXe.controls['ngayKhoiHanh'].touched)">
+            Không được để trống !
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mt-4">
+        <label>Giờ khởi hành:</label>
+        <input type="text" formControlName="gioKhoiHanh"
+               [ngClass]="rfVeXe.controls['gioKhoiHanh'].invalid ? 'is-invalid' : 'is-valid'">
+        <div class="invalid-feedback">
+          <div *ngIf="rfVeXe.controls['gioKhoiHanh'].errors?.required && (rfVeXe.controls['gioKhoiHanh'].touched)">
+            Không được để trống !
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mt-4">
+        <label>Số lượng:</label>
+        <input type="number" formControlName="soLuong"
+               [ngClass]="rfVeXe.controls['soLuong'].invalid ? 'is-invalid' : 'is-valid'">
+        <div class="invalid-feedback">
+          <div *ngIf="rfVeXe.controls['soLuong'].errors?.required && (rfVeXe.controls['soLuong'].touched)">
+            Không được để trống !
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mt-4">
+        <label>Giá vé:</label>
+        <input type="number" formControlName="giaVe"
+               [ngClass]="rfVeXe.controls['giaVe'].invalid ? 'is-invalid' : 'is-valid'">
+        <div class="invalid-feedback">
+          <div *ngIf="rfVeXe.controls['giaVe'].errors?.required && (rfVeXe.controls['giaVe'].touched)">
+            Không được để trống !
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-group mt-4">
+        <label>Facility Type:</label>
+        <select formControlName="nhaXe">
+          <option selected [value]="''">--Danh sách nhà xe--</option>
+          <option *ngFor="let item of danhSachNhaXe" [ngValue]="item">{{item.tenNhaXe}}</option>
+        </select>
+      </div>
+
+      <div>
+        <button class="btn bg-primary mt-4" type="submit">Thêm Mới</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="card border-success mt-4">
+  <h3 class="card-header bg-success">Ứng Dụng Quản Lý Sản Phẩm</h3>
+  <div class="card-body">
+    <h4 class="card-title">Thêm Mới Sản Phẩm</h4>
+    <form [formGroup]="rfFacility" (ngSubmit)="onSubmit()">
+
+      <div class="form-group mt-4">
+        <label>Name:</label>
+        <input type="text" class="form-group" formControlName="name"
+               [ngClass]="rfFacility.controls['name'].invalid ? 'is-invalid' : 'is-valid'">
+        <div class="invalid-feedback">
+          <div *ngIf="rfFacility.controls['name'].errors?.required && (rfFacility.controls['name'].touched)">
+            No empty
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group mt-4">
+        <label>Area:</label>
+        <input type="number" formControlName="area">
+      </div>
+
+
+      <div class="form-group mt-4">
+        <label>Facility Type:</label>
+        <select formControlName="facilityType">
+          <option selected [value]="''">--Facility Type--</option>
+          <option *ngFor="let item of facilityTypeList" [ngValue]="item">{{item.name}}</option>
+        </select>
+      </div>
+
+      <div>
+        <button class="btn bg-primary mt-4" type="submit">Thêm Mới</button>
+      </div>
+    </form>
+  </div>
+</div>
