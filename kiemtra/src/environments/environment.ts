@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  api_url: 'http://localhost:3000/veXe',
-  api_url_nha_xe: 'http://localhost:3000/nhaXe',
+  api_url: 'http://localhost:8080/ve',
+  api_url_nha_xe: 'http://localhost:8080/nha',
 };
 
 /*
